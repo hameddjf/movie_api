@@ -58,6 +58,8 @@ print(f"settings.py: Calculated ALLOWED_HOSTS: {ALLOWED_HOSTS}")
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,6 +71,7 @@ INSTALLED_APPS = [
     "movielenz",
     "celebrity",
     "episode",
+    "user_account",
     
     "rest_framework",
     "mptt",
@@ -92,6 +95,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'movie.urls'
+AUTH_USER_MODEL = 'user_account.User'
 
 TEMPLATES = [
     {
@@ -233,3 +237,18 @@ DRF_POLYMORPHIC_SETTINGS = {
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# jazzmin
+
+JAZZMIN_SETTINGS = {
+    "site_title": "داشبورد",
+    "site_header": "movie",
+    "site_brand": "movie",
+    "welcome_sign": "خوش امدین به پنل ادمین movie",
+    "copyright": "movie",
+    "order_sidebar_by": "movie",
+    "show_sidebar": True,
+    "show_header": True,
+    "navigation_expanded": False,
+    "custom_css": "css/custom.css",  # آدرس CSS سفارشی
+}

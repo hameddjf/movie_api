@@ -32,7 +32,9 @@ urlpatterns = [
     
     path("", include("celebrity.urls")),
     path("", include("episode.urls")),
-    path("", include("movielenz.urls", namespace='cinema-api'))
+    path("", include("movielenz.urls", namespace='cinema-api')),
+    path("", include("user_account.urls")),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
